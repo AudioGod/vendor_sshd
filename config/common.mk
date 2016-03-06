@@ -37,13 +37,8 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 endif
 
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-# Enable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
-endif
-
 # Embed SuperUser
-SUPERUSER_EMBEDDED := true
+#SUPERUSER_EMBEDDED := true
 
 # Backup Tool
 ifneq ($(WITH_GMS),true)
@@ -51,8 +46,6 @@ PRODUCT_COPY_FILES += \
     vendor/sshd/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/sshd/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/sshd/prebuilt/common/bin/50-sshd.sh:system/addon.d/50-sshd.sh \
-	vendor/sshd/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
-	vendor/sshd/prebuilt/common/etc/backup.conf:system/etc/backup.conf \
     vendor/sshd/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 endif
 
@@ -60,22 +53,20 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/sshd/prebuilt/common/bin/otasigcheck.sh:system/bin/otasigcheck.sh
 
-ifneq ($(TARGET_BUILD_VARIANT),user)
 # userinit support
 PRODUCT_COPY_FILES += \
     vendor/sshd/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
-endif	
 	
 # init.d support
 PRODUCT_COPY_FILES += \
 	vendor/sshd/prebuilt/common/bin/sysinit:system/bin/sysinit \
-	vendor/sshd/prebuilt/common/etc/init.d/00sshd:system/etc/init.d/00sshd
+	vendor/sshd/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
 
 # Camera Effects
  ifneq ($(filter sshd_flo sshd_flounder sshd_hammerhead sshd_shamu,$(TARGET_PRODUCT)),)
  PRODUCT_COPY_FILES +=  \
-    vendor/sshd/prebuilt/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
-    vendor/sshd/prebuilt/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
+    vendor/sshd/prebuilt/common/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
+    vendor/sshd/prebuilt/common/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
 endif 
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
@@ -89,10 +80,6 @@ PRODUCT_COPY_FILES += \
 # Enable wireless Xbox 360 controller support
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl	
-	
-# SELinux filesystem labels
-PRODUCT_COPY_FILES += \
-    vendor/sshd/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
@@ -142,12 +129,12 @@ PRODUCT_PACKAGES += \
     rsync
 
 # These packages are excluded from user builds
-ifneq ($(TARGET_BUILD_VARIANT),user)
+#ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
     su
-endif
+#endif
 	
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
