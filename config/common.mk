@@ -86,9 +86,13 @@ PRODUCT_PACKAGES += \
     librsjni	
 
 # Chain fire SuperSU
- PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
     vendor/sshd/prebuilt/supersu/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
     vendor/sshd/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+	
+# Layers Manager
+PRODUCT_COPY_FILES += \
+    vendor/sshd/prebuilt/LayersManager/LayersManager-N-fixed-debug.apk:system/app/LayersManager/LayersManager-N-fixed-debug.apk.apk
  
 # Required SSHD packages
 PRODUCT_PACKAGES += \
