@@ -110,7 +110,7 @@ PRODUCT_COPY_FILES += \
     vendor/sshd/prebuilt/common/fonts/Roboto-Light.ttf:system/fonts/Roboto-Light.ttf \
     vendor/sshd/prebuilt/common/fonts/Roboto-LightItalic.ttf:system/fonts/Roboto-LightItalic.ttf \
     vendor/sshd/prebuilt/common/fonts/Roboto-Medium.ttf:system/fonts/Roboto-Medium.ttf \
-    vendor/sshd/prebuilt/common/fonts/Roboto-MediumItalic.ttf:system/fonts/Roboto-MediumItalic.ttf \	
+    vendor/sshd/prebuilt/common/fonts/Roboto-MediumItalic.ttf:system/fonts/Roboto-MediumItalic.ttf \
     vendor/sshd/prebuilt/common/fonts/Roboto-Regular.ttf:system/fonts/Roboto-Regular.ttf \
 	vendor/sshd/prebuilt/common/fonts/Roboto-Thin.ttf:system/fonts/Roboto-Thin.ttf \
 	vendor/sshd/prebuilt/common/fonts/Roboto-ThinItalic.ttf:system/fonts/Roboto-ThinItalic.ttf
