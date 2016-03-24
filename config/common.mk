@@ -93,6 +93,27 @@ PRODUCT_COPY_FILES += \
 # Layers Manager
 PRODUCT_COPY_FILES += \
     vendor/sshd/prebuilt/LayersManager/LayersManager-N-fixed-debug.apk:system/app/LayersManager/LayersManager-N-fixed-debug.apk.apk
+	
+#SSHD Fonts
+PRODUCT_COPY_FILES += \
+    vendor/sshd/prebuilt/common/fonts/Roboto-Black.ttf:system/fonts/Roboto-Black.ttf \
+    vendor/sshd/prebuilt/common/fonts/Roboto-BlackItalic.ttf:system/fonts/Roboto-BlackItalic.ttf \
+    vendor/sshd/prebuilt/common/fonts/Roboto-Bold.ttf:system/fonts/Roboto-Bold.ttf \
+    vendor/sshd/prebuilt/common/fonts/Roboto-BoldItalic.ttf:system/fonts/Roboto-BoldItalic.ttf \
+    vendor/sshd/prebuilt/common/fonts/RobotoCondensed-Bold.ttf:system/fonts/RobotoCondensed-Bold.ttf \
+    vendor/sshd/prebuilt/common/fonts/RobotoCondensed-BoldItalic.ttf:system/fonts/RobotoCondensed-BoldItalic.ttf \
+    vendor/sshd/prebuilt/common/fonts/RobotoCondensed-Italic.ttf:system/fonts/RobotoCondensed-Italic.ttf \
+    vendor/sshd/prebuilt/common/fonts/RobotoCondensed-Light.ttf:system/fonts/RobotoCondensed-Light.ttf \
+	vendor/sshd/prebuilt/common/fonts/RobotoCondensed-LightItalic.ttf:system/fonts/RobotoCondensed-LightItalic.ttf \
+    vendor/sshd/prebuilt/common/fonts/RobotoCondensed-Regular.ttf:system/fonts/RobotoCondensed-Regular.ttf \
+    vendor/sshd/prebuilt/common/fonts/Roboto-Italic.ttf:system/fonts/Roboto-Italic.ttf \
+    vendor/sshd/prebuilt/common/fonts/Roboto-Light.ttf:system/fonts/Roboto-Light.ttf \
+    vendor/sshd/prebuilt/common/fonts/Roboto-LightItalic.ttf:system/fonts/Roboto-LightItalic.ttf \
+    vendor/sshd/prebuilt/common/fonts/Roboto-Medium.ttf:system/fonts/Roboto-Medium.ttf \
+    vendor/sshd/prebuilt/common/fonts/Roboto-MediumItalic.ttf:system/fonts/Roboto-MediumItalic.ttf \	
+    vendor/sshd/prebuilt/common/fonts/Roboto-Regular.ttf:system/fonts/Roboto-Regular.ttf \
+	vendor/sshd/prebuilt/common/fonts/Roboto-Thin.ttf:system/fonts/Roboto-Thin.ttf \
+	vendor/sshd/prebuilt/common/fonts/Roboto-ThinItalic.ttf:system/fonts/Roboto-ThinItalic.ttf
  
 # Required SSHD packages
 PRODUCT_PACKAGES += \
