@@ -5,3 +5,4 @@ add_lunch_combo sshd_tomato-userdebug
 add_lunch_combo sshd_lettuce-userdebug
 add_lunch_combo sshd_sambar-userdebug
 add_lunch_combo sshd_jalebi-userdebug
+add_lunch_combo sshd_wt88047-userdebug
