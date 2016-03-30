@@ -104,7 +104,8 @@ PRODUCT_PACKAGES += \
 	libemoji \
 	Terminal \
 	SpareParts \
-	Eleven
+	Eleven \
+	OmniJaws
    		
 # Extra tools in SSHD
 PRODUCT_PACKAGES += \
@@ -153,6 +154,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
     media.sf.extractor-plugin=libffmpeg_extractor.so
+
+# DU Utils Library
+PRODUCT_PACKAGES += \
+    org.dirtyunicorns.utils
+	
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
 	
 # SSHD overlays
 PRODUCT_PACKAGE_OVERLAYS := vendor/sshd/overlay/common
